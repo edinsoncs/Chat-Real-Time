@@ -1,0 +1,38 @@
+{
+  "name": "parejasbackend",
+  "version": "0.0.1",
+  "description": "The backend PasDoc",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ockang/pasdog.git"
+  },
+  "author": "Team Pasdoc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ockang/pasdog/issues"
+  },
+  "homepage": "https://github.com/ockang/pasdog#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "hotnode": "0.0.8",
+    "jsonwebtoken": "^8.1.0",
+    "mongodb": "^3.0.1",
+    "mongoose": "^5.0.1",
+    "monk": "^6.0.5",
+    "morgan": "^1.9.0",
+    "shortid": "^2.2.8",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}

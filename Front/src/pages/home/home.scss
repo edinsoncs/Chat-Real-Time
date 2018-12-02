@@ -1,0 +1,76 @@
+page-home {
+
+  @import '../utils/remove_input';
+
+  $colorPrimary:#e74c3c;
+
+   .is__Home {
+   	background: linear-gradient(#f55b5d, #ef4759, #e12f5a, #e02c5a);
+     .is__Header {
+       box-shadow: none!important;
+       text-align: center;
+       box-shadow: none;
+       margin-top: 15%;
+       h1 {
+         color: white;
+         font-size: 40px;
+         font-family: 'Unlock', cursive;
+       }
+       p {
+         color: white;
+         font-weight: 400;
+         font-size: 14px;
+         margin: 0;
+       }
+
+       &:after {
+         display: none!important;
+       }
+
+     }
+
+     .is__Logo {
+      text-align: center;
+      width: 50%;
+      margin: 3em auto 0 auto;
+      padding: 1em;
+     }
+
+     .is__Socials {
+       position: absolute;
+       bottom: 4em;
+       left: 0;
+       right: 0;
+       width: 100%;
+
+       .name_input {
+       	width: 90%;
+  	    margin: 0.8em auto;
+       }
+       button {
+         display: block;
+         width: 90%;
+  	   margin: 0.8em auto;
+         padding: 15px 0;
+         line-height: 10px;
+         margin-bottom: 10px;
+         height: 50px;
+       }
+       button.google {
+         background: white;
+         color: red;
+       }
+       button.white {
+         background: $colorPrimary;
+         color: white;
+       }
+       button.create {
+         color: white;
+       }
+     }
+
+   }
+
+ 
+
+}

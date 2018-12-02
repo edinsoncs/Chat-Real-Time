@@ -1,0 +1,25 @@
+<ion-content padding class="is__Home">
+
+  <div class="is__Logo">
+	<img src="/assets/imgs/smile.svg" alt="" width="150">
+  </div>
+
+  <div class="is__Header">
+      <h1>BUSCA PAREJA</h1>
+      <p>Encuentra a la persona que siempre quisiste, chatea en tiempo real con tu media naranja</p>
+  </div>
+
+  
+
+  <div [ngClass]="'is__Socials'">
+  		<ion-item class="name_input">
+		    <ion-input #textInput id="username" placeholder="Ingresa tu nombre de usuario" [(ngModel)]="username" ></ion-input>
+		</ion-item>
+
+		<button ion-button color="dark" [ngClass]="'google'" (click)="login('google')">Ingresar al chat</button>
+			
+	</div>
+
+
+
+</ion-content>

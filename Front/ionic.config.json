@@ -1,0 +1,7 @@
+{
+  "name": "Parejas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

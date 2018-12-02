@@ -1,0 +1,244 @@
+page-chat {
+  $userBackgroundColor: color($colors, primary);
+  $toUserBackgroundColor: white;
+
+  .header__Chat {
+  	line-height: 60px;
+  	background: #e93b5c;
+  	.toolbar-title {
+  		color: white;
+      font-family: 'Unlock', cursive;
+      text-transform: uppercase;
+  	}
+  }
+
+  .other__list {
+    background: white!important;
+  }
+  
+  .list__Chat {
+    display: flex;
+    background: #f0932b;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(110, 110, 110, 0.11);
+    margin: 10px 0;
+    p {
+      margin: 0;
+    }
+    small {
+      color: black!important;
+    }
+  }
+
+  ion-content .scroll-content {
+    background-color: #f5f5f5;
+    padding-bottom: 42px
+  }
+
+  ion-footer {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+    background-color: #fff;
+    height: 55px;
+  }
+
+  .date-message {
+    width: 100%;
+    text-align: left;
+    color: #CCC;
+
+    p {
+      margin: 6px 0 0
+    }
+  }
+
+  .line-breaker {
+    white-space: pre-line;
+  }
+
+  .input-wrap {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    input {
+      flex: 1;
+      border: 0;
+      border-style: solid;
+      resize: none;
+      font-size: 1.1em;
+      background: #F6F6F6;
+      border-bottom: 1px solid rgba(0,0,0,.05);
+      border-radius: 22px;
+      padding: 10px 16px;
+      margin: 0;
+    }
+    button {
+      margin-left: 6px
+    }
+  }
+
+  .message-wrap {
+    padding: 0 12px;
+
+    .message {
+      position: relative;
+      padding: 7px 0;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+
+        .image {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          border: 1px solid color($colors, light);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+      .msg-detail {
+        display: inline-block;
+        p {
+          margin: 0;
+        }
+        .msg-info {
+          p {
+            font-size: .8em;
+            color: #888;
+          }
+        }
+
+        .msg-content {
+          position: relative;
+          min-width: 45px;
+          margin-top: 5px;
+          border-radius: 5px;
+          padding: 8px;
+          color: #fff;
+          width: auto;
+          display: inline-block;
+          box-shadow: 0 1px 5px #DDD;
+
+          span.triangle {
+            background-color: #fff;
+            border-radius: 2px;
+            height: 8px;
+            width: 8px;
+            top: -4px;
+            display: block;
+            border-style: solid;
+            border-width: 1px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            border: none
+          }
+
+
+          .time {
+            margin: 0;
+            text-align: right;
+            font-size: .8em;
+            opacity: .6;
+            margin-top: 6px
+          }
+
+        }
+
+      }
+
+
+      &--hide-user {
+        padding-top: 0;
+
+        .message__header {
+          display: none;
+        }
+        .msg-content {
+          margin-top: 0 !important;
+          span.triangle {
+            display: none !important;
+          }
+        }
+      }
+
+
+      &--left {
+        .message__header {
+          .image {
+            margin-right: 16px
+          }
+        }
+        .msg-content {
+          background-color: $toUserBackgroundColor;
+          color: color($colors, dark) !important
+        }
+        .msg-content {
+          color: #343434;
+          span.triangle {
+            background: $toUserBackgroundColor !important;
+            border-top-width: 0;
+            border-right-width: 0;
+            left: 16px;
+          }
+        }
+      }
+
+      &--right {
+        align-items: flex-end;
+        margin-left: 20%;
+
+        .message__header {
+          flex-direction: row-reverse;
+          .image {
+            margin-left: 16px
+          }
+        }
+        .message__detail {
+          position: relative;
+
+          ion-spinner {
+            z-index: 2;
+            position: absolute;
+            right: 15px;
+            top: 6px;
+            width: 16px
+          }
+          .msg-content {
+            background-color: $userBackgroundColor;
+            &.loading {
+              opacity: .25;
+            }
+            span.triangle {
+              background-color: $userBackgroundColor !important;
+              border-bottom-width: 0;
+              border-left-width: 0;
+              right: 16px;
+            }
+          }
+        }
+      }
+
+      &--center {
+        width: 100%;
+
+        .system-message {
+          text-align: center;
+          color: #CCC;
+        }
+      }
+
+    }
+
+
+
+  }
+
+}

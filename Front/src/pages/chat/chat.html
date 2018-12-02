@@ -1,0 +1,61 @@
+<ion-header class="header__Chat">
+    <ion-title text-center>Busca Pareja</ion-title>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="message-wrap">
+    <div *ngFor="let msg of messagesAll">
+  
+      
+      <article class="list__Chat" 
+      [class.other__list]="msg.username !== nickname ">
+        <div class="chat__Image">
+          
+          <div class="image">
+            <img src="{{msg.avatar}}"  width="50" height="50">
+          </div>
+
+          <div class="date-message" >
+            <small>{{ msg.date | timeAgo}}</small>
+          </div>
+          
+        </div>
+
+
+        <div class="chat__Description">
+          <div class="name">
+            <strong>{{ msg.username}}</strong>
+          </div>
+          <p class="details">
+            {{ msg.message }}
+          </p>
+        </div>
+
+      </article>
+
+      
+
+
+    </div>
+
+
+  </div>
+
+</ion-content>
+
+
+
+<ion-footer no-border>
+  <div class="input-wrap">
+    <input 
+          placeholder="Escribi un mensaje"
+          [(ngModel)]="editorMsg"
+          (keyup.enter)="sendData()"
+          (focusin)="onFocus()" id="chat_input">
+    <button ion-button clear icon-only item-right (click)="sendData()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </div>
+</ion-footer>
